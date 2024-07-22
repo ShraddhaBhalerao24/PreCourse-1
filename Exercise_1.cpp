@@ -1,7 +1,7 @@
-// Time Complexity :
-// Space Complexity :
+// Time Complexity : O(1) for all operations
+// Space Complexity : O(N) where N in max size of array
 // Did this code successfully run on Leetcode : N/A
-// Any problem you faced while coding this :
+// Any problem you faced while coding this : 
 
 
 // Your code here along with comments explaining your approach
@@ -13,9 +13,6 @@ using namespace std;
 #define MAX 1000 
   
 class Stack {
-  //Please read sample.java file before starting.
-  //Kindly include Time and Space complexity at top of each file
-    int top; 
   
 public:   
     Stack() 
@@ -30,15 +27,12 @@ public:
 
 private: 
     int stack_size = 0; // Number of items filled in stack
-    int stack[MAX]; // Maximum capacity of Stack 
+    int stack[MAX];     // Maximum capacity of Stack 
 
 }; 
   
 bool Stack::push(int x) 
 { 
-    //Your code here
-    //Check Stack overflow as well
-
     if(stack_size >= MAX)
     {
         // If stack is full to max capacity,
@@ -55,13 +49,12 @@ bool Stack::push(int x)
   
 int Stack::pop() 
 { 
-    //Your code here
-    //Check Stack Underflow as well
-
     int item_to_return;
 
     if(isEmpty() == false)
     {
+        // If stack has elements in it, return the last element entered
+        // i.e. top element of stack
         item_to_return = stack[stack_size-1];
         stack_size--;
     }
@@ -81,9 +74,6 @@ int Stack::pop()
 } 
 int Stack::peek() 
 { 
-    //Your code here
-    //Check empty condition too
-
     int item_to_return;
     if(isEmpty() == false)
     {
